@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALVI Recrutement | Experts Banque & Assurance</title>
+    <style>
+        :root {
+            --primary: #1a2a40; /* Bleu nuit logo */
+            --accent: #5da0cc;  /* Bleu azur logo */
+            --light: #f4f7f9;
+            --white: #ffffff;
+            --text: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            color: var(--text);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        header {
+            background: var(--white);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container img {
+            height: 70px;
+            width: auto;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 42, 64, 0.9), rgba(26, 42, 64, 0.9)), 
+                        url('https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            color: white;
+            padding: 120px 5%;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 900px; margin: 0 auto 40px; }
+
+        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        
+        .btn {
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-accent { background: var(--accent); color: white; }
+        .btn-outline { border: 2px solid var(--accent); color: white; }
+        .btn-accent:hover { background: #4a8eb8; }
+        .btn-outline:hover { background: var(--accent); }
+
+        /* Sections */
+        section { padding: 80px 5%; }
+        h2 { color: var(--primary); text-align: center; margin-bottom: 40px; font-size: 2rem; }
+
+        /* Formulaires */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            background: var(--light);
+        }
+
+        .form-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-box h3 { color: var(--accent); margin-top: 0; }
+
+        form label { display: block; margin: 15px 0 5px; font-weight: 600; }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Bio */
+        .bio-section { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .bio-content { flex: 1; min-width: 300px; }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 40px 5%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="ALVI RECRUTEMENT HQ.-fotor-enhance-20260204171150.jpg" alt="ALVI Recrutement">
+    </div>
+    <nav>
+        <a href="#a-propos">Expertise</a>
+        <a href="#contact-candidat">Candidats</a>
+        <a href="#contact-entreprise">Entreprises</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Spécialiste du recrutement : Banque, Assurance & Risques</h1>
+    <p>Une approche personnalisée pour les TPE/PME/ETI avec pour atout la réactivité et une connaissance marché experte.</p>
+    <div class="btn-group">
+        <a href="#contact-candidat" class="btn btn-accent">Déposer mon CV</a>
+        <a href="#contact-entreprise" class="btn btn-outline">Besoin d'un talent ?</a>
+    </div>
+</section>
+
+<section id="a-propos">
+    <div class="bio-section">
+        <div class="bio-content">
+            <h2>13 années d'expérience à votre service</h2>
+            <p>J'ai occupé des fonctions au sein d'un service recrutement en entreprise puis de chargé de recrutement et de consultant au sein d'un cabinet spécialiste des secteurs Banque/Assurance/Asset Management.</p>
+            <p>Motivé par un projet entrepreneurial, je crée <strong>ALVI recrutement</strong> en septembre 2021 pour continuer à accompagner mes clients TPE/PME/ETI dans les secteurs de la banque de l'assurance et de la gestion des risques.</p>
+            <p>J’aide aujourd’hui mes clients à identifier leurs futures ressources avec pour atout la réactivité, la connaissance de mon marché et mon expertise de ces secteurs riches et en évolution constante.</p>
+            <p><strong>Alexandre Viaud</strong><br>06 75 17 80 71 | aviau@alvi-recrutement.fr</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact-candidat" style="background: var(--light);">
+    <h2>Espace Contact</h2>
+    <div class="contact-container">
+        
+        <div class="form-box">
+            <h3>Candidat : Déposez votre CV</h3>
+            <p>Postulez de manière spontanée ou pour un secteur précis.</p>
+            <form action="mailto:aviau@alvi-recrutement.fr" method="post" enctype="text/plain">
+                <label>Nom Complet</label>
+                <input type="text" name="Nom" placeholder="Votre nom" required>
+                
+                <label>Email</label>
+                <input type="email" name="Email" placeholder="votre@email.com" required>
+                
+                <label>Secteur souhaité</label>
+                <select name="Secteur">
+                    <option>Banque</option>
+                    <option>Assurance</option>
+                    <option>Gestion des Risques / Sinistres</option>
+                    <option>Autre</option>
+                </select>
+
+                <label>Lien vers votre CV (LinkedIn ou Drive)</label>
+                <input type="text" name="LienCV" placeholder="http://linkedin.com/in/..." required>
+                
+                <label>Message</label>
+                <textarea name="Message" rows="4"></textarea>
+                
+                <button type="submit" class="submit-btn">Envoyer ma candidature</button>
+            </form>
+        </div>
+
+        <div class="form-box">
+            <h3>Entreprise : Confiez-nous un besoin</h3>
+            <p>Décrivez brièvement le profil que vous recherchez.</p>
+            <form action="mailto:aviau@alvi-recrutement.fr" method="post" enctype="text/plain">
+                <label>Nom de l'Entreprise</label>
+                <input type="text" name="Societe" placeholder="Nom de votre TPE/PME/ETI" required>
+                
+                <label>Votre Nom & Fonction</label>
+                <input type="text" name="Contact" placeholder="Votre nom" required>
+
+                <label>Email Professionnel</label>
+                <input type="email" name="Email_Pro" required>
+                
+                <label>Type de besoin</label>
+                <select name="TypeBesoin">
+                    <option>Recrutement Permanent</option>
+                    <option>Chasse de têtes</option>
+                    <option>Conseil RH</option>
+                </select>
+                
+                <label>Description du poste</label>
+                <textarea name="PosteDescription" rows="4" placeholder="Compétences clés, localisation..."></textarea>
+                
+                <button type="submit" class="submit-btn" style="background: var(--accent);">Demander un échange</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p><strong>ALVI Recrutement</strong></p>
+    <p>Expertise Banque / Assurance / Gestion des risques et sinistres</p>
+    <p>© 2026 - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
