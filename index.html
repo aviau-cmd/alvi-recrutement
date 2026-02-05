@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALVI Recrutement | Experts Banque & Assurance</title>
+    
+    <meta name="description" content="ALVI Recrutement - Cabinet expert en recrutement Banque, Assurance et Gestion des Risques pour TPE, PME et ETI. Plus de 13 ans d'expertise.">
+    <link rel="icon" type="image/jpg" href="ALVI RECRUTEMENT HQ.-fotor-enhance-20260204171150.jpg">
+
     <style>
         :root {
             --primary: #1a2a40; /* Bleu nuit logo */
@@ -81,12 +85,13 @@
         section { padding: 80px 5%; }
         h2 { color: var(--primary); text-align: center; margin-bottom: 40px; font-size: 2rem; }
 
-        /* Formulaires */
+        /* Nouvelles Cartes Contact Sécurisées */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
-            background: var(--light);
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .form-box {
@@ -94,18 +99,12 @@
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 5px solid var(--accent);
         }
 
-        .form-box h3 { color: var(--accent); margin-top: 0; }
-
-        form label { display: block; margin: 15px 0 5px; font-weight: 600; }
-        form input, form select, form textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
+        .form-box h3 { color: var(--primary); margin-top: 0; font-size: 1.5rem; }
+        .icon-box { font-size: 3rem; margin-bottom: 20px; }
 
         .submit-btn {
             background: var(--primary);
@@ -117,6 +116,14 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
 
         /* Bio */
@@ -139,8 +146,7 @@
     </div>
     <nav>
         <a href="#a-propos">Expertise</a>
-        <a href="#contact-candidat">Candidats</a>
-        <a href="#contact-entreprise">Entreprises</a>
+        <a href="#contacts">Contact</a>
     </nav>
 </header>
 
@@ -148,8 +154,8 @@
     <h1>Spécialiste du recrutement : Banque / Assurance / Gestion des Risques</h1>
     <p>Une approche personnalisée pour les TPE/PME/ETI avec pour atout la réactivité et une connaissance marché experte.</p>
     <div class="btn-group">
-        <a href="#contact-candidat" class="btn btn-accent">Déposer mon CV</a>
-        <a href="#contact-entreprise" class="btn btn-outline">Besoin d'un talent ?</a>
+        <a href="#contacts" class="btn btn-accent">Déposer mon CV</a>
+        <a href="#contacts" class="btn btn-outline">Besoin d'un talent ?</a>
     </div>
 </section>
 
@@ -165,63 +171,24 @@
     </div>
 </section>
 
-<section id="contact-candidat" style="background: var(--light);">
-    <h2>Espace Contact</h2>
+<section id="contacts" style="background: var(--light);">
+    <h2>Espaces Dédiés</h2>
     <div class="contact-container">
         
         <div class="form-box">
-            <h3>Candidat : Déposez votre CV</h3>
-            <p>Postulez de manière spontanée ou pour un secteur précis.</p>
-            <form action="mailto:aviau@alvi-recrutement.fr" method="post" enctype="text/plain">
-                <label>Nom Complet</label>
-                <input type="text" name="Nom" placeholder="Votre nom" required>
-                
-                <label>Email</label>
-                <input type="email" name="Email" placeholder="votre@email.com" required>
-                
-                <label>Secteur souhaité</label>
-                <select name="Secteur">
-                    <option>Banque</option>
-                    <option>Assurance</option>
-                    <option>Gestion des Risques / Sinistres</option>
-                    <option>Autre</option>
-                </select>
-
-                <label>Lien vers votre CV (LinkedIn ou Drive)</label>
-                <input type="text" name="LienCV" placeholder="http://linkedin.com/in/..." required>
-                
-                <label>Message</label>
-                <textarea name="Message" rows="4"></textarea>
-                
-                <button type="submit" class="submit-btn">Envoyer ma candidature</button>
-            </form>
+            <div class="icon-box">👤</div>
+            <h3>Espace Candidat</h3>
+            <p>Vous souhaitez donner un nouvel élan à votre carrière dans la Banque ou l'Assurance ?</p>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Dépôt de CV sécurisé (Antivirus & RGPD)</p>
+            <a href="#" target="_blank" class="submit-btn">Déposer mon CV</a>
         </div>
 
-        <div class="form-box">
-            <h3>Entreprise : Confiez-nous un besoin</h3>
-            <p>Décrivez brièvement le profil que vous recherchez.</p>
-            <form action="mailto:aviau@alvi-recrutement.fr" method="post" enctype="text/plain">
-                <label>Nom de l'Entreprise</label>
-                <input type="text" name="Societe" placeholder="Nom de votre TPE/PME/ETI" required>
-                
-                <label>Votre Nom & Fonction</label>
-                <input type="text" name="Contact" placeholder="Votre nom" required>
-
-                <label>Email Professionnel</label>
-                <input type="email" name="Email_Pro" required>
-                
-                <label>Type de besoin</label>
-                <select name="TypeBesoin">
-                    <option>Recrutement Permanent</option>
-                    <option>Chasse de têtes</option>
-                    <option>Conseil RH</option>
-                </select>
-                
-                <label>Description du poste</label>
-                <textarea name="PosteDescription" rows="4" placeholder="Compétences clés, localisation..."></textarea>
-                
-                <button type="submit" class="submit-btn" style="background: var(--accent);">Demander un échange</button>
-            </form>
+        <div class="form-box" style="border-top-color: var(--primary);">
+            <div class="icon-box">🏢</div>
+            <h3>Espace Entreprise</h3>
+            <p>TPE, PME ou ETI : confiez-nous vos recherches de talents en Gestion des Risques et Sinistres.</p>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Analyse de besoin et réponse sous 48h</p>
+            <a href="#" target="_blank" class="submit-btn" style="background: var(--accent);">Confier une mission</a>
         </div>
 
     </div>
@@ -235,5 +202,3 @@
 
 </body>
 </html>
-
-
