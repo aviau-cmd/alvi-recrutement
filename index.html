@@ -25,31 +25,41 @@
             scroll-behavior: smooth;
         }
 
-        /* Navigation */
+        /* NAVIGATION - LOGO AGRANDI */
         header {
             background: var(--white);
-            padding: 10px 5%;
+            padding: 20px 5%; /* Augmentation du padding pour laisser respirer le logo */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         .logo-container img {
-            height: 70px;
+            height: 120px; /* Logo beaucoup plus grand */
             width: auto;
+            transition: transform 0.3s ease; /* Petit effet au survol */
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.05); /* Le logo grandit légèrement quand on passe la souris */
         }
 
         nav a {
-            margin-left: 20px;
+            margin-left: 25px;
             text-decoration: none;
             color: var(--primary);
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-weight: 700;
+            font-size: 1rem;
             text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
         }
 
         /* Hero Section */
@@ -62,13 +72,13 @@
             text-align: center;
         }
 
-        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; max-width: 900px; margin: 0 auto 40px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; max-width: 900px; margin: 0 auto 40px; }
 
         .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         
         .btn {
-            padding: 15px 35px;
+            padding: 15px 40px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
@@ -78,14 +88,14 @@
 
         .btn-accent { background: var(--accent); color: white; }
         .btn-outline { border: 2px solid var(--accent); color: white; }
-        .btn-accent:hover { background: #4a8eb8; }
-        .btn-outline:hover { background: var(--accent); }
+        .btn-accent:hover { background: #4a8eb8; transform: translateY(-3px); }
+        .btn-outline:hover { background: var(--accent); transform: translateY(-3px); }
 
         /* Sections */
         section { padding: 80px 5%; }
-        h2 { color: var(--primary); text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        h2 { color: var(--primary); text-align: center; margin-bottom: 40px; font-size: 2.2rem; }
 
-        /* Nouvelles Cartes Contact Sécurisées */
+        /* Cartes Contact Sécurisées */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -96,34 +106,35 @@
 
         .form-box {
             background: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
             text-align: center;
-            border-top: 5px solid var(--accent);
+            border-top: 6px solid var(--accent);
         }
 
-        .form-box h3 { color: var(--primary); margin-top: 0; font-size: 1.5rem; }
-        .icon-box { font-size: 3rem; margin-bottom: 20px; }
+        .form-box h3 { color: var(--primary); margin-top: 0; font-size: 1.6rem; }
+        .icon-box { font-size: 3.5rem; margin-bottom: 20px; }
 
         .submit-btn {
             background: var(--primary);
             color: white;
             border: none;
-            padding: 15px;
+            padding: 18px;
             width: 100%;
-            margin-top: 20px;
-            border-radius: 5px;
+            margin-top: 25px;
+            border-radius: 6px;
             cursor: pointer;
             font-weight: bold;
             display: inline-block;
             text-decoration: none;
             transition: 0.3s;
+            font-size: 1.1rem;
         }
 
         .submit-btn:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
+            background: var(--accent);
+            transform: translateY(-3px);
         }
 
         /* Bio */
@@ -134,7 +145,15 @@
             background: var(--primary);
             color: white;
             text-align: center;
-            padding: 40px 5%;
+            padding: 50px 5%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 20px; }
+            .logo-container img { height: 90px; }
+            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -151,11 +170,11 @@
 </header>
 
 <section class="hero">
-    <h1>Spécialiste du recrutement : Banque / Assurance / Gestion des Risques</h1>
-    <p>Une approche personnalisée pour les TPE/PME/ETI avec pour atout la réactivité et une connaissance marché experte.</p>
+    <h1>Recrutement Stratégique : Banque, Assurance & Risques</h1>
+    <p>Expertise métier et réactivité pour les TPE, PME et ETI ambitieuses.</p>
     <div class="btn-group">
         <a href="#contacts" class="btn btn-accent">Déposer mon CV</a>
-        <a href="#contacts" class="btn btn-outline">Besoin d'un talent ?</a>
+        <a href="#contacts" class="btn btn-outline">Recruter un Talent</a>
     </div>
 </section>
 
@@ -166,7 +185,8 @@
             <p>Après avoir occupé des fonctions au sein d'un service recrutement en entreprise puis de chargé de recrutement et de consultant au sein d'un cabinet spécialiste des secteurs Banque/Assurance/Asset Management.</p>
             <p>Motivé par un projet entrepreneurial, je crée <strong>ALVI recrutement</strong> en septembre 2021 pour continuer à accompagner mes clients TPE/PME/ETI dans les secteurs de la banque de l'assurance et de la gestion des risques.</p>
             <p>J’aide aujourd’hui mes clients à identifier leurs futures ressources avec pour atout la réactivité, la connaissance de mon marché et mon expertise de ces secteurs riches et en évolution constante.</p>
-            <p><strong>Alexandre VIAU</strong><br>06 75 17 80 71 | aviau@alvi-recrutement.fr</p>
+            <p style="margin-top: 30px;"><strong>Alexandre VIAU</strong><br>
+            <span style="color: var(--accent);">06 75 17 80 71 | aviau@alvi-recrutement.fr</span></p>
         </div>
     </div>
 </section>
@@ -177,27 +197,27 @@
         
         <div class="form-box">
             <div class="icon-box">👤</div>
-            <h3>Espace Candidat</h3>
-            <p>Vous souhaitez donner un nouvel élan à votre carrière dans la Banque ou l'Assurance ?</p>
-            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Dépôt de CV sécurisé (Antivirus & RGPD)</p>
-            <a href="#" target="_blank" class="submit-btn">Déposer mon CV</a>
+            <h3>Candidat</h3>
+            <p>Donnez un nouvel élan à votre carrière dans la Banque ou l'Assurance.</p>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Dépôt de CV sécurisé</p>
+            <a href="#" target="_blank" class="submit-btn">Soumettre mon profil</a>
         </div>
 
         <div class="form-box" style="border-top-color: var(--primary);">
             <div class="icon-box">🏢</div>
-            <h3>Espace Entreprise</h3>
-            <p>TPE, PME ou ETI : confiez-nous vos recherches de talents en Gestion des Risques et Sinistres.</p>
-            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Analyse de besoin et réponse sous 48h</p>
-            <a href="#" target="_blank" class="submit-btn" style="background: var(--accent);">Confier une mission</a>
+            <h3>Entreprise</h3>
+            <p>Confiez-nous vos recherches de talents en Gestion des Risques et Sinistres.</p>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Analyse de besoin sous 48h</p>
+            <a href="#" target="_blank" class="submit-btn" style="background: var(--accent);">Lancer un recrutement</a>
         </div>
 
     </div>
 </section>
 
 <footer>
-    <p><strong>ALVI Recrutement</strong></p>
-    <p>Expertise Banque / Assurance / Gestion des risques et sinistres</p>
-    <p>© 2026 - Tous droits réservés</p>
+    <p style="font-size: 1.2rem; margin-bottom: 10px;"><strong>ALVI Recrutement</strong></p>
+    <p>Spécialiste Banque / Assurance / Gestion des risques et sinistres</p>
+    <p style="opacity: 0.7; font-size: 0.8rem; margin-top: 20px;">© 2026 - Tous droits réservés</p>
 </footer>
 
 </body>
