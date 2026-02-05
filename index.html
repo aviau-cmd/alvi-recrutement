@@ -25,10 +25,10 @@
             scroll-behavior: smooth;
         }
 
-        /* NAVIGATION - LOGO AGRANDI */
+        /* NAVIGATION - LOGO TRES GRAND */
         header {
             background: var(--white);
-            padding: 20px 5%; /* Augmentation du padding pour laisser respirer le logo */
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -36,30 +36,43 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            min-height: 120px; /* Assure une hauteur minimale pour le header */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
         }
 
         .logo-container img {
-            height: 120px; /* Logo beaucoup plus grand */
+            height: 180px; /* TAILLE AUGMENTÉE À 180PX */
             width: auto;
-            transition: transform 0.3s ease; /* Petit effet au survol */
+            transition: all 0.3s ease;
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
         }
 
         .logo-container img:hover {
-            transform: scale(1.05); /* Le logo grandit légèrement quand on passe la souris */
+            transform: scale(1.03);
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
         }
 
         nav a {
-            margin-left: 25px;
             text-decoration: none;
             color: var(--primary);
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
             transition: 0.3s;
+            border-bottom: 2px solid transparent;
         }
 
         nav a:hover {
             color: var(--accent);
+            border-bottom: 2px solid var(--accent);
         }
 
         /* Hero Section */
@@ -68,34 +81,35 @@
                         url('https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             color: white;
-            padding: 120px 5%;
+            padding: 140px 5% 100px;
             text-align: center;
         }
 
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.3rem; max-width: 900px; margin: 0 auto 40px; }
+        .hero h1 { font-size: 3.2rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.4rem; max-width: 900px; margin: 0 auto 40px; }
 
         .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         
         .btn {
-            padding: 15px 40px;
+            padding: 18px 45px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
             transition: 0.3s;
             display: inline-block;
+            font-size: 1.1rem;
         }
 
-        .btn-accent { background: var(--accent); color: white; }
+        .btn-accent { background: var(--accent); color: white; border: 2px solid var(--accent); }
         .btn-outline { border: 2px solid var(--accent); color: white; }
-        .btn-accent:hover { background: #4a8eb8; transform: translateY(-3px); }
+        .btn-accent:hover { background: #4a8eb8; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
         .btn-outline:hover { background: var(--accent); transform: translateY(-3px); }
 
         /* Sections */
-        section { padding: 80px 5%; }
-        h2 { color: var(--primary); text-align: center; margin-bottom: 40px; font-size: 2.2rem; }
+        section { padding: 100px 5%; }
+        h2 { color: var(--primary); text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
 
-        /* Cartes Contact Sécurisées */
+        /* Cartes Contact Sécurisées (Tally) */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -106,54 +120,66 @@
 
         .form-box {
             background: var(--white);
-            padding: 50px 40px;
-            border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
             text-align: center;
-            border-top: 6px solid var(--accent);
+            border-top: 8px solid var(--accent);
+            transition: 0.3s;
         }
 
-        .form-box h3 { color: var(--primary); margin-top: 0; font-size: 1.6rem; }
-        .icon-box { font-size: 3.5rem; margin-bottom: 20px; }
+        .form-box:hover { transform: translateY(-10px); }
+
+        .form-box h3 { color: var(--primary); margin-top: 0; font-size: 1.8rem; }
+        .icon-box { font-size: 4rem; margin-bottom: 20px; }
 
         .submit-btn {
             background: var(--primary);
             color: white;
             border: none;
-            padding: 18px;
+            padding: 20px;
             width: 100%;
-            margin-top: 25px;
-            border-radius: 6px;
+            margin-top: 30px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: bold;
             display: inline-block;
             text-decoration: none;
             transition: 0.3s;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         .submit-btn:hover {
             background: var(--accent);
-            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         /* Bio */
-        .bio-section { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
-        .bio-content { flex: 1; min-width: 300px; }
+        .bio-section { 
+            display: flex; 
+            align-items: center; 
+            gap: 60px; 
+            flex-wrap: wrap; 
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .bio-content { flex: 1; min-width: 300px; font-size: 1.15rem; }
+        .bio-content h2 { text-align: left; }
 
         footer {
             background: var(--primary);
             color: white;
             text-align: center;
-            padding: 50px 5%;
+            padding: 60px 5%;
         }
 
-        /* Responsive */
+        /* Responsive Mobile */
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; }
-            nav { margin-top: 20px; }
-            .logo-container img { height: 90px; }
-            .hero h1 { font-size: 2.2rem; }
+            header { flex-direction: column; padding: 20px; }
+            .logo-container img { height: 130px; margin-bottom: 20px; }
+            nav { gap: 15px; }
+            .hero h1 { font-size: 2.4rem; }
+            section { padding: 60px 5%; }
         }
     </style>
 </head>
@@ -164,29 +190,32 @@
         <img src="ALVI RECRUTEMENT HQ.-fotor-enhance-20260204171150.jpg" alt="ALVI Recrutement">
     </div>
     <nav>
-        <a href="#a-propos">Expertise</a>
+        <a href="#a-propos">Mon Expertise</a>
         <a href="#contacts">Contact</a>
     </nav>
 </header>
 
 <section class="hero">
     <h1>Recrutement Stratégique : Banque, Assurance & Risques</h1>
-    <p>Expertise métier et réactivité pour les TPE, PME et ETI ambitieuses.</p>
+    <p>Une expertise de 13 ans pour accompagner les TPE, PME et ETI dans l'identification de leurs futurs talents.</p>
     <div class="btn-group">
         <a href="#contacts" class="btn btn-accent">Déposer mon CV</a>
-        <a href="#contacts" class="btn btn-outline">Recruter un Talent</a>
+        <a href="#contacts" class="btn btn-outline">Recruter un profil</a>
     </div>
 </section>
 
 <section id="a-propos">
     <div class="bio-section">
         <div class="bio-content">
-            <h2>13 années d'expérience à votre service</h2>
-            <p>Après avoir occupé des fonctions au sein d'un service recrutement en entreprise puis de chargé de recrutement et de consultant au sein d'un cabinet spécialiste des secteurs Banque/Assurance/Asset Management.</p>
-            <p>Motivé par un projet entrepreneurial, je crée <strong>ALVI recrutement</strong> en septembre 2021 pour continuer à accompagner mes clients TPE/PME/ETI dans les secteurs de la banque de l'assurance et de la gestion des risques.</p>
-            <p>J’aide aujourd’hui mes clients à identifier leurs futures ressources avec pour atout la réactivité, la connaissance de mon marché et mon expertise de ces secteurs riches et en évolution constante.</p>
-            <p style="margin-top: 30px;"><strong>Alexandre VIAU</strong><br>
-            <span style="color: var(--accent);">06 75 17 80 71 | aviau@alvi-recrutement.fr</span></p>
+            <h2>Votre partenaire recrutement depuis 2021</h2>
+            <p>Fort de 13 années d'expérience en recrutement, j'ai exercé aussi bien en entreprise qu'en cabinet spécialisé sur les secteurs <strong>Banque / Assurance / Asset Management</strong>.</p>
+            <p>J'ai fondé <strong>ALVI recrutement</strong> en septembre 2021 avec une ambition simple : mettre ma connaissance du marché au service des TPE, PME et ETI pour identifier des ressources expertes en gestion des risques et sinistres.</p>
+            <p>Ma force réside dans ma <strong>réactivité</strong> et ma compréhension fine de secteurs techniques en constante mutation.</p>
+            <p style="margin-top: 30px; padding: 20px; border-left: 4px solid var(--accent); background: var(--light);">
+                <strong>Alexandre VIAU</strong><br>
+                <span style="font-size: 1.2rem; color: var(--primary);">06 75 17 80 71</span><br>
+                <a href="mailto:aviau@alvi-recrutement.fr" style="color: var(--accent); text-decoration: none;">aviau@alvi-recrutement.fr</a>
+            </p>
         </div>
     </div>
 </section>
@@ -197,17 +226,17 @@
         
         <div class="form-box">
             <div class="icon-box">👤</div>
-            <h3>Candidat</h3>
-            <p>Donnez un nouvel élan à votre carrière dans la Banque ou l'Assurance.</p>
-            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Dépôt de CV sécurisé</p>
-            <a href="#" target="_blank" class="submit-btn">Soumettre mon profil</a>
+            <h3>Espace Candidat</h3>
+            <p>Prêt pour un nouveau challenge dans la Banque ou l'Assurance ?</p>
+            <p style="font-size: 0.95rem; color: #666; margin-bottom: 20px;">Traitement confidentiel et sécurisé.</p>
+            <a href="#" target="_blank" class="submit-btn">Soumettre ma candidature</a>
         </div>
 
         <div class="form-box" style="border-top-color: var(--primary);">
             <div class="icon-box">🏢</div>
-            <h3>Entreprise</h3>
-            <p>Confiez-nous vos recherches de talents en Gestion des Risques et Sinistres.</p>
-            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Analyse de besoin sous 48h</p>
+            <h3>Espace Entreprise</h3>
+            <p>Vous recherchez un expert métier en Gestion des Risques ou Sinistres ?</p>
+            <p style="font-size: 0.95rem; color: #666; margin-bottom: 20px;">Analyse de profil personnalisée sous 48h.</p>
             <a href="#" target="_blank" class="submit-btn" style="background: var(--accent);">Lancer un recrutement</a>
         </div>
 
@@ -215,9 +244,9 @@
 </section>
 
 <footer>
-    <p style="font-size: 1.2rem; margin-bottom: 10px;"><strong>ALVI Recrutement</strong></p>
+    <p style="font-size: 1.4rem; margin-bottom: 10px;"><strong>ALVI Recrutement</strong></p>
     <p>Spécialiste Banque / Assurance / Gestion des risques et sinistres</p>
-    <p style="opacity: 0.7; font-size: 0.8rem; margin-top: 20px;">© 2026 - Tous droits réservés</p>
+    <p style="opacity: 0.6; font-size: 0.9rem; margin-top: 30px;">© 2026 - Tous droits réservés | Alexandre Viau</p>
 </footer>
 
 </body>
