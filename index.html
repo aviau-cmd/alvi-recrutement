@@ -4,47 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALVI Recrutement | Experts Banque & Assurance</title>
-    <link rel="icon" type="image/jpg" href="ALVI RECRUTEMENT HQ.-fotor-enhance-20260204171150.jpg">
+    <link rel="icon" type="image/jpg" href="logo.jpg">
     <style>
-        :root { --primary: #1a2a40; --accent: #5da0cc; --light: #f4f7f9; --white: #ffffff; --text: #333; }
-        body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; margin: 0; color: var(--text); line-height: 1.6; scroll-behavior: smooth; }
-        header { background: var(--white); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; min-height: 120px; }
-        .logo-container img { height: 180px; width: auto; transition: 0.3s; }
-        nav a { margin-left: 20px; text-decoration: none; color: var(--primary); font-weight: 700; text-transform: uppercase; }
-        .hero { background: linear-gradient(rgba(26, 42, 64, 0.9), rgba(26, 42, 64, 0.9)), url('https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&w=1350&q=80'); background-size: cover; color: white; padding: 120px 5%; text-align: center; }
-        .hero h1 { font-size: 3rem; }
-        .btn { padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin: 10px; }
-        .btn-accent { background: var(--accent); color: white; }
-        .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 5%; }
-        .form-box { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border-top: 6px solid var(--accent); }
-        .submit-btn { background: var(--primary); color: white; padding: 15px; width: 100%; border-radius: 5px; display: block; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        :root { --primary: #1a2a40; --accent: #5da0cc; --white: #ffffff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; line-height: 1.6; color: #333; }
+        
+        /* HEADER OPTIMISÉ POUR VOTRE LOGO */
+        header { 
+            background: var(--white); 
+            padding: 0 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky; top: 0; z-index: 1000;
+            height: 120px; /* Hauteur fixe du menu */
+            overflow: hidden; /* Coupe le surplus de blanc du logo */
+        }
+
+        .logo-container { display: flex; align-items: center; height: 100%; }
+
+        .logo-container img { 
+            height: 450px; /* On affiche l'image TRÈS grande */
+            width: auto; 
+            margin-top: 20px; /* On décale pour centrer la partie colorée */
+            margin-bottom: -20px;
+            transition: transform 0.3s;
+        }
+
+        nav a { margin-left: 25px; text-decoration: none; color: var(--primary); font-weight: 800; text-transform: uppercase; }
+
+        .hero { 
+            background: linear-gradient(rgba(26, 42, 64, 0.85), rgba(26, 42, 64, 0.85)), url('https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&w=1350&q=80'); 
+            background-size: cover; color: white; padding: 100px 5%; text-align: center; 
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .btn { padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; background: var(--accent); color: white; margin-top: 20px; }
+
+        section { padding: 80px 5%; max-width: 1100px; margin: 0 auto; }
+        h2 { color: var(--primary); font-size: 2.2rem; border-left: 5px solid var(--accent); padding-left: 15px; }
+        
+        .card { background: #f4f7f9; padding: 40px; border-radius: 15px; text-align: center; border-top: 8px solid var(--accent); margin-top: 30px;}
+        .card-btn { background: var(--primary); color: white; padding: 15px; display: block; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; }
+        
         footer { background: var(--primary); color: white; text-align: center; padding: 40px; }
     </style>
 </head>
 <body>
+
 <header>
-    <div class="logo-container"><img src="ALVI RECRUTEMENT HQ.-fotor-enhance-20260204171150.jpg" alt="ALVI Recrutement"></div>
-    <nav><a href="#a-propos">Expertise</a><a href="#contacts">Contact</a></nav>
+    <div class="logo-container">
+        <img src="logo.jpg" alt="ALVI Recrutement">
+    </div>
+    <nav>
+        <a href="#expertise">Expertise</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
+
 <section class="hero">
-    <h1>Recrutement Stratégique : Banque & Assurance</h1>
-    <p>13 ans d'expertise pour vos besoins en Gestion des Risques.</p>
-    <a href="#contacts" class="btn btn-accent">Déposer mon CV</a>
+    <h1>Recrutement Spécialisé Banque & Assurance</h1>
+    <p>Votre partenaire stratégique pour identifier les talents de demain.</p>
+    <a href="#contact" class="btn">Me contacter</a>
 </section>
-<section id="contacts" style="background: var(--light);">
-    <div class="contact-container">
-        <div class="form-box">
-            <h3>Candidat</h3>
-            <p>Dépôt de CV sécurisé</p>
-            <a href="#" class="submit-btn">Soumettre mon profil</a>
-        </div>
-        <div class="form-box" style="border-top-color: var(--primary);">
-            <h3>Entreprise</h3>
-            <p>Analyse de besoin sous 48h</p>
-            <a href="#" class="submit-btn" style="background: var(--accent);">Lancer un recrutement</a>
-        </div>
+
+<section id="expertise">
+    <h2>13 années d'expérience</h2>
+    <p>Après un parcours en entreprise et en cabinet spécialisé (Banque/Assurance/Asset Management), j'ai fondé <strong>ALVI recrutement</strong> en 2021.</p>
+    <p>J'accompagne les TPE, PME et ETI avec réactivité et une expertise métier pointue en gestion des risques et sinistres.</p>
+    <p style="background: var(--light); padding: 20px; border-radius: 10px;">
+        <strong>Alexandre VIAU</strong><br>
+        06 75 17 80 71 | <a href="mailto:aviau@alvi-recrutement.fr">aviau@alvi-recrutement.fr</a>
+    </p>
+</section>
+
+<section id="contact">
+    <div class="card">
+        <h3>Espace Candidat</h3>
+        <p>Déposez votre CV en toute sécurité.</p>
+        <a href="#" class="card-btn">Soumettre mon profil</a>
+    </div>
+    <div class="card" style="border-top-color: var(--primary);">
+        <h3>Espace Entreprise</h3>
+        <p>Besoin d'un expert sous 48h ?</p>
+        <a href="#" class="card-btn" style="background: var(--accent);">Lancer un recrutement</a>
     </div>
 </section>
-<footer><p>ALVI Recrutement © 2026</p></footer>
+
+<footer>
+    <p>ALVI Recrutement © 2026</p>
+</footer>
+
 </body>
 </html>
